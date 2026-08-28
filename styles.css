@@ -9,58 +9,36 @@ h1,h2,h3{margin:0}
 .cv-header{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:36px 40px;border-bottom:1px solid var(--line)}
 .who h1{font-size:clamp(26px,4vw,34px);letter-spacing:-.02em}
 .role{margin:6px 0 0;color:var(--accent);font-size:14px;font-weight:600}
-.download{flex:none;background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}
+.download{flex:none;background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;display:inline-block}
 .download:hover{opacity:.85}
 
-.cv-grid{display:grid;grid-template-columns:230px 1fr}
+.motivation{padding:36px 40px;border-bottom:1px solid var(--line)}
+.motivation p{margin:0 0 16px;font-size:16px;line-height:1.7;color:#333338}
+.motivation p:last-child{margin-bottom:0}
+.motivation .lede{font-size:clamp(20px,2.6vw,25px);line-height:1.45;letter-spacing:-.01em;color:var(--ink);font-weight:600}
+.motivation .lede strong{color:var(--accent)}
 
-.sidebar{background:#f2f1ec;border-right:1px solid var(--line);padding:32px 28px;display:flex;flex-direction:column;gap:30px}
-.side-block h2{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:12px}
-.plain{list-style:none;margin:0;padding:0;font-size:14px;display:flex;flex-direction:column;gap:8px}
-.plain li{display:flex;justify-content:space-between;gap:8px}
-.plain a{text-decoration:none;word-break:break-word}
-.plain a:hover{color:var(--accent)}
-.plain span{color:var(--muted)}
-.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.chips li{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:5px 10px;color:#3f3f44}
-.edu{margin-bottom:14px}
-.edu:last-child{margin-bottom:0}
-.edu time{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
-.edu p{margin:0;font-size:13.5px;line-height:1.45}
+.viewer{background:#e9e8e2;padding:24px 24px 32px}
+.pdf-frame{width:100%;height:min(1400px,145vh);border:1px solid var(--line);border-radius:12px;background:#fff;display:block}
+.pdf-fallback{padding:48px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;color:var(--muted)}
 
-.content{padding:36px 40px}
-.block{margin-bottom:36px}
-.block:last-child{margin-bottom:0}
-.block h2{font-size:19px;letter-spacing:-.01em;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
-.block p{margin:0 0 12px;color:#333338;font-size:15px}
-.block p:last-child{margin-bottom:0}
-
-.marks{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
-.marks li{font-size:14.5px;color:#333338;padding-left:16px;border-left:2px solid var(--accent)}
-.marks strong{color:var(--ink)}
-
-.job{padding:18px 0;border-top:1px solid var(--line)}
-.job:first-of-type{border-top:none;padding-top:0}
-.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
-.job-head h3{font-size:16.5px}
-.job-head time{font-size:13px;color:var(--muted);white-space:nowrap}
-.job .org{margin:2px 0 10px;font-size:13.5px;color:var(--accent);font-weight:600}
-.job ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
-.job li{font-size:14px;color:#3d3d42}
-
-.cv-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 40px;border-top:1px solid var(--line);background:#f2f1ec;font-size:12px;color:var(--muted)}
+.cv-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:22px 40px;border-top:1px solid var(--line);background:#f2f1ec;font-size:13px;color:var(--muted)}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{text-decoration:none}
+.footer-links a:hover{color:var(--accent)}
 .download-text{color:var(--accent);text-decoration:none;font-weight:600}
 .download-text:hover{text-decoration:underline}
 
 @media(max-width:700px){
-  .cv-grid{grid-template-columns:1fr}
-  .sidebar{border-right:none;border-bottom:1px solid var(--line)}
-  .cv-header,.content{padding:26px 22px}
-  .cv-footer{padding:18px 22px}
+  .cv-header,.motivation{padding:26px 22px}
+  .viewer{padding:18px}
+  .pdf-frame{height:80vh}
+  .cv-footer{padding:18px 22px;flex-direction:column;align-items:flex-start}
 }
 
 @media print{
   body{background:#fff}
   .page{box-shadow:none;border:none;width:100%;margin:0}
-  .download,.cv-footer{display:none}
+  .download,.cv-footer,.motivation{display:none}
+  .pdf-frame{height:100vh}
 }
