@@ -9,15 +9,15 @@
   <meta property="og:description" content="Хочу приєднатися до команди mono: бачу тут перспективу росту та можливість вже сьогодні приносити результат людям." />
   <meta property="og:type" content="website" />
   <title>Анна Мирошниченко — резюме</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <div class="page">
 
     <header class="cv-header">
       <div class="who">
+        <p class="eyebrow">Кандидатка · Служба турботи mono</p>
         <h1>Анна Мирошниченко</h1>
-        <p class="role">Кандидатка · Служба турботи mono</p>
       </div>
       <a class="download" href="assets/anna-myroshnychenko-cv.pdf" download>Завантажити PDF ↓</a>
     </header>
@@ -29,12 +29,17 @@
     </section>
 
     <section class="viewer">
-      <object data="assets/anna-myroshnychenko-cv.pdf" type="application/pdf" class="pdf-frame" aria-label="Резюме Анни Мирошниченко у PDF">
-        <div class="pdf-fallback">
-          <p>Ваш браузер не показує PDF прямо тут.</p>
-          <a class="download" href="assets/anna-myroshnychenko-cv.pdf" download>Завантажити PDF ↓</a>
-        </div>
-      </object>
+      <div class="viewer-head">
+        <h2>Резюме</h2>
+        <a class="download ghost" href="assets/anna-myroshnychenko-cv.pdf" download>Завантажити PDF ↓</a>
+      </div>
+      <div class="pdf-shell">
+        <embed
+          class="pdf-frame"
+          src="assets/anna-myroshnychenko-cv.pdf#toolbar=0&navpanes=0&statusbar=0&view=FitH"
+          type="application/pdf"
+          aria-label="Резюме Анни Мирошниченко" />
+      </div>
     </section>
 
     <footer class="cv-footer">
@@ -44,7 +49,6 @@
         <a href="tel:+380964780878">+380 96 478 08 78</a>
         <a href="https://t.me/annamir078" target="_blank" rel="noopener">Telegram: @annamir078</a>
       </div>
-      <a class="download-text" href="assets/anna-myroshnychenko-cv.pdf" download>Завантажити резюме у PDF ↓</a>
     </footer>
   </div>
 </body>
